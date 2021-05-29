@@ -1,0 +1,141 @@
+{ 
+    "_id" : ObjectId("5e25e692c4938e1167dac1ff"), 
+    "Answers" : [
+
+    ], 
+    "Type" : NumberInt(2), 
+    "Question" : "U kom delu Beograda zivis ?", 
+    "NumberAnswers" : NumberInt(1), 
+    "IdQ" : NumberInt(1), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e6bcc4938e1167dac200"), 
+    "Answers" : [
+
+    ], 
+    "Type" : NumberInt(1), 
+    "Question" : "Na skali od 1(los) do 10(dobar) oceni vazduh u tvom kraju ?", 
+    "NumberAnswers" : NumberInt(1), 
+    "IdQ" : NumberInt(2), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e6d7c4938e1167dac201"), 
+    "Answers" : [
+
+    ], 
+    "Type" : NumberInt(3), 
+    "NumberAnswers" : NumberInt(1), 
+    "Question" : "Sta bi sugerisao kao resenje za trenutno stanje vazduha ?", 
+    "IdQ" : NumberInt(3), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e73ac4938e1167dac202"), 
+    "Answers" : [
+        "Nemam", 
+        "1-2", 
+        "2+"
+    ], 
+    "Type" : NumberInt(5), 
+    "NumberAnswers" : NumberInt(3), 
+    "Question" : "Koliko dece imas ?", 
+    "IdQ" : NumberInt(4), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e7d7c4938e1167dac204"), 
+    "Answers" : [
+        "Da", 
+        "Ne"
+    ], 
+    "Type" : NumberInt(4), 
+    "NumberAnswers" : NumberInt(2), 
+    "Question" : "Da li imas nekoga u Australiji?", 
+    "IdQ" : NumberInt(5), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e81ec4938e1167dac205"), 
+    "Answers" : [
+        "Nikakve", 
+        "Srednje", 
+        "Velike"
+    ], 
+    "Type" : NumberInt(4), 
+    "NumberAnswers" : NumberInt(3), 
+    "Question" : "Kolike su sanse da se slicni scenarijo tokom leta desi u Srbiji?", 
+    "IdQ" : NumberInt(6), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e859c4938e1167dac206"), 
+    "Answers" : [
+
+    ], 
+    "Type" : NumberInt(2), 
+    "Question" : "Daj dva predloga da se slicno ne desi u Srbiji", 
+    "NumberAnswers" : NumberInt(2), 
+    "IdQ" : NumberInt(7), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e8e2c4938e1167dac208"), 
+    "Answers" : [
+
+    ], 
+    "Type" : NumberInt(1), 
+    "Question" : "Koja su ti 3 omiljena broja ?", 
+    "NumberAnswers" : NumberInt(3), 
+    "IdQ" : NumberInt(8), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e8fbc4938e1167dac209"), 
+    "Answers" : [
+        "Da", 
+        "Ne"
+    ], 
+    "Type" : NumberInt(4), 
+    "NumberAnswers" : NumberInt(2), 
+    "Question" : "Da li cesto sanjas crvenu boju ?", 
+    "IdQ" : NumberInt(9), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e92fc4938e1167dac20a"), 
+    "Answers" : [
+
+    ], 
+    "Type" : NumberInt(2), 
+    "Question" : "Sa koja dva se horoskopska znaka najvise slazes ?", 
+    "NumberAnswers" : NumberInt(2), 
+    "IdQ" : NumberInt(10), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e945c4938e1167dac20b"), 
+    "Answers" : [
+
+    ], 
+    "Type" : NumberInt(3), 
+    "NumberAnswers" : NumberInt(1), 
+    "Question" : "Opisi ukratko svoj najludji san.", 
+    "IdQ" : NumberInt(11), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5e25e9a1c4938e1167dac20c"), 
+    "Answers" : [
+        "Zeceve", 
+        "More", 
+        "Tamu", 
+        "Vucica"
+    ], 
+    "Type" : NumberInt(5), 
+    "NumberAnswers" : NumberInt(4), 
+    "Question" : "Sta si od ovoga sanjao u skorije vreme ?", 
+    "IdQ" : NumberInt(12), 
+    "__v" : NumberInt(0)
+}

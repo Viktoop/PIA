@@ -1,0 +1,34 @@
+{ 
+    "_id" : ObjectId("5e25eab4c4938e1167dac20e"), 
+    "Answers" : [
+        {
+            "answers" : [
+                "Vozdovac"
+            ], 
+            "idQ" : NumberInt(1)
+        }, 
+        {
+            "answers" : [
+                NumberInt(4)
+            ], 
+            "idQ" : NumberInt(2)
+        }, 
+        {
+            "answers" : [
+                "Uvodjenje filtera na fabrike i toplane"
+            ], 
+            "idQ" : NumberInt(3)
+        }, 
+        {
+            "answers" : [
+                true, 
+                false, 
+                false
+            ], 
+            "idQ" : NumberInt(4)
+        }
+    ], 
+    "User" : "viktoop", 
+    "IdA" : NumberInt(1), 
+    "__v" : NumberInt(0)
+}
