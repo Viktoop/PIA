@@ -1,0 +1,47 @@
+<div class="admin-users-container admin-users-pozadina">
+  <div *ngFor="let user of users" class="admin-user">
+      <div class="first">
+        <div class="anketa-info-heading">Name:</div>
+        <div class="anketa-info-description"> Last name: </div>
+        <div class="anketa-info-description"> Type: </div>
+      </div>
+      <div>
+        <div class="anketa-info-heading">{{user.name}} </div>
+        <div class="anketa-info-description">{{user.lastName}} </div>
+        <div class="anketa-info-description">{{user.type}} </div>
+      </div>
+      <div class="first">
+        <div class="anketa-info-heading">Username:</div>
+        <div class="anketa-info-description"> Password: </div>
+        <div class="anketa-info-description"> Birthdate: </div>
+      </div>
+      <div>
+        <div class="anketa-info-heading">{{user.username}} </div>
+        <div class="anketa-info-description">{{user.password}} </div>
+        <div class="anketa-info-description">{{user.birthdate | date:'dd - MM - yyyy'}} </div>
+      </div>
+      <div class="first">
+        <div class="anketa-info-heading">JMBG:</div>
+        <div class="anketa-info-description"> Phone number: </div>
+        <div class="anketa-info-description"> E-mail: </div>
+      </div>
+      <div>
+        <div class="anketa-info-heading">{{user.jmbg}} </div>
+        <div class="anketa-info-description">{{user.phoneNumber}} </div>
+        <div class="anketa-info-description">{{user.email}} </div>
+      </div>
+
+      <div class="third">
+        <div class="items">
+          <a><i class="far fa-edit item"></i></a>
+          <a (click)="delete(user)"><i class="fas fa-trash-alt item"></i></a>
+          <a (click)="approve(user)"><i class="fas fa-check-circle item" *ngIf="!user.approved"></i></a>
+        </div>
+      </div>
+
+  </div>
+  <div class="add" routerLink="/adduser"  skipLocationChange>
+    <i class="fas fa-plus-circle fa-2x" style="margin: auto;"></i>
+  </div>
+</div>
+

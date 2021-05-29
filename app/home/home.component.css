@@ -1,0 +1,14 @@
+.welcome {
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 5%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  border-radius: 5px;
+  font-family: 'Carter One', cursive;
+  font-size: 5rem;
+  text-shadow: 2px 2px 4px #000000
+}

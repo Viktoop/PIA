@@ -1,0 +1,42 @@
+.ankete-container{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ankete-pozadina{
+  padding: 5%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  border-radius: 5px;
+}
+
+.anketa{
+  padding: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.anketa:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.anketa-info {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.anketa-info-heading {
+  font-size: 2rem;
+}
+
+.anketa-info-description {
+  color: lightgray;
+}

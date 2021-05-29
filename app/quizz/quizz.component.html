@@ -1,0 +1,74 @@
+<div class="quizz-container">
+  <i class="fas fa-arrow-circle-left fa-2x back" (click)="back()"></i>
+  <h3 style="color: green;" *ngIf="filledout && !unavailable">Anket filled out</h3>
+  <h3 style="color: red;" *ngIf="disableanswers && isowner">Cannot fill if owner</h3>
+  <h3 style="color: red;" *ngIf="disableanswers && unavailable">Anketa not available, hasn't started or has ended</h3>
+  <div>
+    <div>
+      <b>Name:</b> {{quizz.Name}}
+    </div>
+    <div>
+      <b>Start Date:</b> {{quizz.StartDate |  date:'dd - MMM - yyyy'}}
+    </div>
+    <div>
+      <b>End Date:</b> {{quizz.EndDate |  date:'dd - MMM - yyyy'}}
+    </div>
+    <div>
+      <b>Description:</b> {{quizz.Description}}
+    </div>
+  </div>
+
+  <div *ngFor="let question of quizz.Questions; let j = index" class="question-container">
+    <div class="quizz-question-container">
+      {{j+1}}. {{question.Question}}
+    </div>
+    <hr>
+    <div *ngIf="question.Type === 1" class="quizz-answer-container" >
+      <div *ngFor="let item of ' '.repeat(question.NumberAnswers).split(''); let i = index">
+        {{i+1}}.
+        <input [(ngModel)]="selectedAnswers[j].answers[i]"
+               class="quizz-input"
+               type="number"
+               [name]="i+1"
+               required
+               [disabled]="disableanswers"
+               [placeholder]=""/>
+      </div>
+    </div>
+    <div *ngIf="question.Type === 2" class="quizz-answer-container">
+      <div *ngFor="let item of ' '.repeat(question.NumberAnswers).split(''); let i = index">
+        {{i+1}}.
+        <input [(ngModel)]="selectedAnswers[j].answers[i]"
+               class="quizz-input"
+               [name]="i + 1"
+               [disabled]="disableanswers"
+               [placeholder]=""/>
+      </div>
+    </div>
+    <div *ngIf="question.Type === 3" class="quizz-answer-container">
+      <textarea [(ngModel)]="selectedAnswers[j].answers[0]"
+                class="quizz-input"
+                [name]="textarea"
+                [disabled]="disableanswers">
+
+      </textarea>
+    </div>
+    <div *ngIf="question.Type === 4" class="quizz-answer-container">
+      <div *ngFor="let answer of question.Answers; let i = index">
+        <input [(ngModel)]="selectedAnswers[j].answers[0]" [disabled]="disableanswers" type="radio" name="answer" [value]="answer"/>
+        {{answer}}
+      </div>
+    </div>
+    <div *ngIf="question.Type === 5" class="quizz-answer-container">
+      <div *ngFor="let answer of question.Answers; let i = index">
+        <input [(ngModel)]="selectedAnswers[j].answers[i]" [disabled]="disableanswers" type="checkbox" name="answer[i]" [value]="answer"/>
+        {{answer}}
+      </div>
+    </div>
+  </div>
+  <pre>
+  </pre>
+  <div>
+    <button class="btn btn-success submit-button" *ngIf="!disableanswers" (click)="submit()"><h3>Submit</h3></button>
+  </div>
+</div>

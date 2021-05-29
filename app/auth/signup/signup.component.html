@@ -1,0 +1,68 @@
+<div class=" signup-container">
+  <form (submit) = "onSignup(signupForm)" #signupForm = "ngForm">
+    <div class="signup-form">
+      <h3>Signup here!</h3>
+      <div class="row">
+        <div class="col-sm-6" >
+          <div class="form-group">
+            <h6>Name:</h6>
+              <input type="text" name="name" #nameInput="ngModel" ngModel class="form-control" placeholder="Name *" value="" required/>
+              <div class="alert-danger" *ngIf="invalid && nameInput.invalid"> Name must not be empty</div>
+            </div>
+          <h6>Last Name:</h6>
+          <div class="form-group">
+              <input type="text" name="lastname" #lastNameInput="ngModel" ngModel class="form-control" placeholder="Last Name *" value="" required/>
+              <div class="alert-danger" *ngIf="invalid && lastNameInput.invalid"> Last Name must not be empty</div>
+            </div>
+          <h6>Username:</h6>
+          <div class="form-group">
+            <input type="text" name="username" #usernameInput="ngModel" ngModel class="form-control" placeholder="Userame *" value="" required/>
+            <div class="alert-danger" *ngIf="invalid && usernameInput.invalid"> Username must not be empty</div>
+            <div class="alert-danger" *ngIf="!usernameUnique"> Username must be unique</div>
+          </div>
+          <h6>Password: <i class="far fa-question-circle" matTooltip="Min 8 characters, must start with letter, at least one number and special char"></i></h6>
+          <div class="form-group">
+            <input type="password" name="password1" #password1Input="ngModel" ngModel class="form-control" placeholder="Password *" value="" required pattern="^.*(?=.{8,})([A-z])((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$"/>
+            <div class="alert-danger" *ngIf="invalid && password1Input.invalid"> Password is not in the correct format</div>
+          </div>
+          <h6>Confirm Password:</h6>
+          <div class="form-group">
+            <input type="password" name="password2" #password2Input="ngModel" ngModel class="form-control" placeholder="Confirm password *" value="" required/>
+            <div class="alert-danger" *ngIf="password2Input.value !== password1Input.value"> Passwords do not match</div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <h6>Birthdate:</h6>
+          <mat-form-field>
+            <input matInput [(ngModel)]="date" [matDatepicker]="picker" name="date" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker name="pick"></mat-datepicker>
+          </mat-form-field>
+          <div class="alert-danger" *ngIf="invalid && date === null"> Birthdate must not be empty</div>
+          <h6>Birthplace:</h6>
+          <div class="form-group">
+            <input type="text" name="birthplace" #birthplaceInput="ngModel" ngModel class="form-control" placeholder="Birthplace *" value="" required/>
+            <div class="alert-danger" *ngIf="invalid && birthplaceInput.invalid"> Birthplace must not be empty</div>
+          </div>
+          <h6>JMBG:</h6>
+          <div class="form-group">
+            <input type="number" name="jmbg" #jmbgInput="ngModel" ngModel class="form-control" placeholder="JMBG *" value="" required pattern="[0-9]{13}"/>
+            <div class="alert-danger" *ngIf="invalid && jmbgInput.invalid"> JMBG must be 13 charachters long</div>
+          </div>
+          <h6>Phone number:</h6>
+          <div class="form-group">
+            <input type="text" name="phonenumber" #phNumInput="ngModel" ngModel class="form-control" placeholder="Phone number *" value="" required/>
+            <div class="alert-danger" *ngIf="invalid && phNumInput.invalid"> Phone Number must not be empty</div>
+            <div class="alert-danger" *ngIf="invalid && phonenumbercorrect !== false"> Phone Number must only contain digits</div>
+          </div>
+          <h6>E-mail:</h6>
+          <div class="form-group">
+            <input type="text" name="email" #emailInput="ngModel" ngModel class="form-control" placeholder="Phone E-mail *" value="" required email/>
+            <div class="alert-danger" *ngIf="invalidEmail === true"> Cannot register more than 2 accounts per email</div>
+          </div>
+        </div>
+      </div>
+      <input type="submit" class="btnSubmit" value="Sign up" />
+    </div>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+<div class="ankete-container ankete-pozadina">
+  <button class="btn btn-info" style="margin-right: 1%;" (click)="setAnkete()">Ankete</button>
+  <button class="btn btn-info" (click)="setTests()">Tests</button>
+  <h2 *ngIf="!anktest" style="margin-top: 1%;">Ankete:</h2>
+  <h2 *ngIf="anktest" style="margin-top: 1%;">Tests:</h2>
+
+  <div  *ngIf="!anktest">
+    <div *ngFor="let anketa of ankete" class="anketa-info anketa" (click)="onClickAnketa(anketa)">
+      <div class="anketa-info-heading"> {{anketa.Name}} </div>
+      <div class="anketa-info-description"> {{anketa.Description}} </div>
+    </div>
+  </div>
+  <div  *ngIf="anktest">
+    <div *ngFor="let test of testovi" class="anketa-info anketa" (click)="onClickTest(test)">
+      <div class="anketa-info-heading"> {{test.Name}} </div>
+      <div class="anketa-info-description"> {{test.Description}} </div>
+    </div>
+  </div>
+
+</div>
+

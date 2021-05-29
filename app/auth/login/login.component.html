@@ -1,0 +1,27 @@
+<div class="container login-container" >
+  <div class="row">
+      <div class="col-md-6 login-form-1">
+          <h3>Login for Form</h3>
+          <form (submit) = "onLogin(loginForm)" #loginForm = "ngForm">
+              <div class="form-group">
+                  <input type="text" name="username" #usernameInput="ngModel" ngModel class="form-control" placeholder="Your Username *" required/>
+                  <div class="alert-danger" *ngIf="invalid && usernameInput.invalid"> Username must not be empty</div>
+                </div>
+              <div class="form-group">
+                  <input type="password" name="password" #passwordInput="ngModel" ngModel class="form-control" placeholder="Your Password *" required/>
+                  <div class="alert-danger" *ngIf="invalid && passwordInput.invalid"> Password must not be empty</div>
+              </div>
+              <div class="alert-danger" *ngIf="invalidCredentials"> Invalid credentials </div>
+              <div class="alert-danger" *ngIf="unapproved"> User not yet approved </div>
+              <div class="form-group">
+                  <input type="submit" class="btnSubmit" value="Login" />
+              </div>
+              <div class="form-group">
+                <a class="ForgetPwd" routerLink="/signup" skipLocationChange="true">Don't have an account? Sign up here!</a>
+            </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+
